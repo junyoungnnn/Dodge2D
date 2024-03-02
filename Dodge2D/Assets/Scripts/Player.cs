@@ -41,11 +41,11 @@ public class Player : MonoBehaviour
     {
         if(rigidbody2D.velocity == Vector2.zero)
         {
-            animator.SetBool("Run", true);
+            animator.SetBool("Run", false);
         }
         else
         {
-            animator.SetBool("Run", false);
+            animator.SetBool("Run", true);
         }
 
         rigidbody2D.velocity = new Vector3(direction.x, direction.y, 0) * speed * Time.fixedDeltaTime;
