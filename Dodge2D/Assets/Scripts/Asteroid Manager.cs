@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class AsteroidManager : MonoBehaviour
@@ -26,8 +27,12 @@ public class AsteroidManager : MonoBehaviour
                 );
 
             yield return new WaitForSeconds(3f);
+            Destroy( prefab );
         }
+        
     }
+
+    
 
     //private void OnCollisionExit2D(Collision2D collision)
     //{
